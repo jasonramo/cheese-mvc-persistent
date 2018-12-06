@@ -56,12 +56,4 @@ public class Cheese {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public CheeseType getType() {
-        return type;
-    }
-
-    public void setType(CheeseType type) {
-        this.type = type;
-    }
 }
