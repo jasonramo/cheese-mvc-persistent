@@ -28,7 +28,7 @@ public class Cheese {
     @ManyToOne
     private Category category;
 
-    @ManyToMany(mappedBy = "cheeses")
+    //@ManyToMany(mappedBy = "cheeses")
     private ArrayList<Menu> menus;
 
     public Cheese(String name, String description) {

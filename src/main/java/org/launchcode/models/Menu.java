@@ -19,7 +19,7 @@ public class Menu {
     @GeneratedValue
     private int id;
 
-    @ManyToMany
+    //@ManyToMany
     private ArrayList<Cheese> cheeses = new ArrayList<>();
 
     public Menu(String name){
