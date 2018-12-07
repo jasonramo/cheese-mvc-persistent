@@ -9,19 +9,12 @@
     <nav th:replace="fragments :: navigation"></nav>
 
     <p th:unless="${menu} and ${menus.size()}">No Menus Available</p>
-    <table class="table">
 
-        <tr>
-            <th>Name</th>
-            <!--can add each additional category here-->
-\        </tr>
-
-        <tr th:each="menu : ${menus}">
-            <!--TODO need to add link to menu's ID with the form /menu/view/5-->
-            <td th:text="${menu.name}"></td>
-        </tr>
-
-    </table>
+    <ul>
+        <li th:each="menu : ${menus}">
+            <a th:href="'/menu/view/' + ${menu.id}" th:text="${menu.name}"></a>
+        </li>
+    </ul>
     <a href="/menu/add">Add Menu</a>
 
 </body>
