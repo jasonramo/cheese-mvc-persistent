@@ -25,6 +25,7 @@ public class CheeseController {
     @Autowired
     private CheeseDao cheeseDao;
 
+    @Autowired
     private CategoryDao categoryDao;
 
     // Request path: /cheese

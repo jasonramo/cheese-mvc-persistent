@@ -16,7 +16,7 @@ public class Category {
     @Size(min=3, max=15)
     private String name;
 
-    @OneToMany
+    //@OneToMany
     @JoinColumn(name = "category_id")
     private ArrayList<Cheese> cheeses = new ArrayList<>();
 
