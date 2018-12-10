@@ -31,7 +31,6 @@ public class Menu {
     }
 
     public void addItem(Cheese item) {
-        //TODO 1 - what to put here???
         cheeses.add(item);
     }
 

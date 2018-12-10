@@ -31,9 +31,10 @@ public class Cheese {
     //@ManyToMany(mappedBy = "cheeses")
     private ArrayList<Menu> menus;
 
-    public Cheese(String name, String description) {
+    public Cheese(String name, String description, Category category) {
         this.name = name;
         this.description = description;
+        this.category = category;
     }
 
     public Cheese() { }
