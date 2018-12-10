@@ -26,7 +26,7 @@ public class MenuController {
     @Autowired
     private MenuDao menuDao;
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "")
     public String index(Model model) {
         model.addAttribute("menus", menuDao.findAll());
         model.addAttribute("title", "Menus");
@@ -59,7 +59,7 @@ public class MenuController {
         return "/menu/view";
     }
 
-    @RequestMapping(value = "add-item/{itemId}", method = RequestMethod.GET)
+    @RequestMapping(value = "add-item/{menuId}", method = RequestMethod.GET)
     public String addItem(Model model, @PathVariable int menuId) {
         Menu menu = menuDao.findOne(menuId);
         AddMenuItemForm aForm = new AddMenuItemForm(menu,cheeseDao.findAll());
